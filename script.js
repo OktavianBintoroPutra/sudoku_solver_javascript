@@ -11,7 +11,6 @@ $( document ).ready(function() {
         input_id = document.activeElement.id;
       });
 
-    // var t = '832751..674..9..1..9..827.3...1...4.....45.2.....7.5313....496.4..3...8..61..9374';
     solve.addEventListener("click", function(){
         cari_jawaban(convertStringtoGrid(getinput()));
         tampilkan_jawaban();
@@ -24,6 +23,8 @@ $( document ).ready(function() {
     function hapus(){
         for (let i = 0; i < grid.length; i++) {
             grid[i].value = '';
+            grid[i].disabled = false;
+            hasil = [];
         }
     }
     
