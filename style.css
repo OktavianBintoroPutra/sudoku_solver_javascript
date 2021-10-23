@@ -1,0 +1,88 @@
+body{
+    background-color: aquamarine;
+    width: 100%;
+    height: 100%;    
+    text-align: center;
+    overflow: hidden;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.container{
+    background-color: bisque;
+    margin: auto;
+    width: 50%;
+    height: 80vh;
+    padding: 10px;
+    display: grid;
+    color: white;
+    border: 1px solid black;
+    grid-template-columns: auto;
+}
+.grid{
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 30px;
+    display: grid;    
+    /* border: 1px solid black; */
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+}
+.grid-child{
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    font-size: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    text-align: center;
+
+}
+
+.gc1{
+    border-left: 1px solid red;
+    border-top: 1px solid red;
+}
+.gc2{
+    border-top: 1px solid red;
+}
+.gc3{
+    border-top: 1px solid red;
+    border-right: 1px solid red;
+}
+.gc4{
+    border-left: 1px solid red;    
+}
+.gc5{
+    border-right: 1px solid red;
+}
+.gc6{
+    border-left: 1px solid red;
+    border-bottom: 1px solid red;
+}
+.gc7{
+    border-bottom: 1px solid red;
+}
+.gc8{
+    border-bottom: 1px solid red;
+    border-right: 1px solid red;
+}
+
+.number-container{
+    background-color: bisque;
+    margin: auto;
+    width: 50%;
+    height: 10%;
+    padding: 10px;
+    display: grid;
+    color: white;
+    border: 1px solid black;
+    grid-template-columns: auto auto;
+}
+.btn{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    color: black;
+    font-size: 30px;
+    display: inline;
+}

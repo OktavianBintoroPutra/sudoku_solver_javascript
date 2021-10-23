@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="grid" id="g1">
+            <input class="grid-child gc1" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g1-1"></input>
+            <input class="grid-child gc2" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g1-2"></input>
+            <input class="grid-child gc3" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g1-3"></input>
+            <input class="grid-child gc1" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g1-4"></input>
+            <input class="grid-child gc2" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g1-5"></input>
+            <input class="grid-child gc3" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g1-6"></input>
+            <input class="grid-child gc1" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g1-7"></input>
+            <input class="grid-child gc2" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g1-8"></input>
+            <input class="grid-child gc3" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g1-9"></input>
+        </div>
+        <div class="grid" id="g2">
+            <input class="grid-child gc4" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g2-1"></input>
+            <input class="grid-child" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g2-2"></input>
+            <input class="grid-child gc5" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g2-3"></input>
+            <input class="grid-child gc4" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g2-4"></input>
+            <input class="grid-child" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g2-5"></input>
+            <input class="grid-child gc5" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g2-6"></input>
+            <input class="grid-child gc4" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g2-7"></input>
+            <input class="grid-child" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g2-8"></input>
+            <input class="grid-child gc5" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g2-9"></input>
+        </div>
+        <div class="grid" id="g3">
+            <input class="grid-child gc6" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g3-1"></input>
+            <input class="grid-child gc7" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g3-2"></input>
+            <input class="grid-child gc8" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g3-3"></input>
+            <input class="grid-child gc6" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g3-4"></input>
+            <input class="grid-child gc7" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g3-5"></input>
+            <input class="grid-child gc8" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g3-6"></input>
+            <input class="grid-child gc6" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g3-7"></input>
+            <input class="grid-child gc7" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g3-8"></input>
+            <input class="grid-child gc8" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g3-9"></input>
+        </div>
+        <div class="grid" id="g4">
+            <input class="grid-child gc1" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g4-1"></input>
+            <input class="grid-child gc2" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g4-2"></input>
+            <input class="grid-child gc3" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g4-3"></input>
+            <input class="grid-child gc1" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g4-4"></input>
+            <input class="grid-child gc2" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g4-5"></input>
+            <input class="grid-child gc3" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g4-6"></input>
+            <input class="grid-child gc1" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g4-7"></input>
+            <input class="grid-child gc2" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g4-8"></input>
+            <input class="grid-child gc3" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g4-9"></input>
+        </div>
+        <div class="grid" id="g5">
+            <input class="grid-child gc4" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g5-1"></input>
+            <input class="grid-child" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g5-2"></input>
+            <input class="grid-child gc5" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g5-3"></input>
+            <input class="grid-child gc4" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g5-4"></input>
+            <input class="grid-child" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g5-5"></input>
+            <input class="grid-child gc5" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g5-6"></input>
+            <input class="grid-child gc4" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g5-7"></input>
+            <input class="grid-child" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g5-8"></input>
+            <input class="grid-child gc5" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g5-9"></input>
+        </div>
+        <div class="grid" id="g6">
+            <input class="grid-child gc6" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g6-1"></input>
+            <input class="grid-child gc7" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g6-2"></input>
+            <input class="grid-child gc8" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g6-3"></input>
+            <input class="grid-child gc6" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g6-4"></input>
+            <input class="grid-child gc7" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g6-5"></input>
+            <input class="grid-child gc8" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g6-6"></input>
+            <input class="grid-child gc6" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g6-7"></input>
+            <input class="grid-child gc7" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g6-8"></input>
+            <input class="grid-child gc8" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g6-9"></input>
+        </div>
+        <div class="grid" id="g7">
+            <input class="grid-child gc1" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g7-1"></input>
+            <input class="grid-child gc2" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g7-2"></input>
+            <input class="grid-child gc3" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g7-3"></input>
+            <input class="grid-child gc1" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g7-4"></input>
+            <input class="grid-child gc2" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g7-5"></input>
+            <input class="grid-child gc3" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g7-6"></input>
+            <input class="grid-child gc1" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g7-7"></input>
+            <input class="grid-child gc2" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g7-8"></input>
+            <input class="grid-child gc3" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g7-9"></input>
+        </div>
+        <div class="grid" id="g8">
+            <input class="grid-child gc4" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g8-1"></input>
+            <input class="grid-child" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g8-2"></input>
+            <input class="grid-child gc5" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g8-3"></input>
+            <input class="grid-child gc4" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g8-4"></input>
+            <input class="grid-child" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g8-5"></input>
+            <input class="grid-child gc5" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g8-6"></input>
+            <input class="grid-child gc4" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g8-7"></input>
+            <input class="grid-child" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g8-8"></input>
+            <input class="grid-child gc5" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g8-9"></input>
+        </div>
+        <div class="grid" id="g9">
+            <input class="grid-child gc6" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g9-1"></input>
+            <input class="grid-child gc7" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g9-2"></input>
+            <input class="grid-child gc8" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g9-3"></input>
+            <input class="grid-child gc6" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g9-4"></input>
+            <input class="grid-child gc7" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g9-5"></input>
+            <input class="grid-child gc8" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g9-6"></input>
+            <input class="grid-child gc6" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g9-7"></input>
+            <input class="grid-child gc7" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g9-8"></input>
+            <input class="grid-child gc8" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;" id="g9-9"></input>
+        </div>
+    </div>
+    <div class="number-container">
+        <button class="btn" id='solve'>Solve</button>
+        <button class="btn" id='clear'>Clear</button>
+    </div>
+</body>
+</html>
