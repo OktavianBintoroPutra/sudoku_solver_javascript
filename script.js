@@ -1,15 +1,6 @@
-$( document ).ready(function() {
-    
     const solve = document.getElementById('solve');
     const clear = document.getElementById('clear');
-
-    var input_id;
-
     const grid = document.getElementsByClassName('grid-child');
-
-    $('.grid-child').click(function() {
-        input_id = document.activeElement.id;
-      });
 
     solve.addEventListener("click", function(){
         cari_jawaban(convertStringtoGrid(getinput()));
@@ -138,4 +129,3 @@ $( document ).ready(function() {
                 }
         }
     }
-});
